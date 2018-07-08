@@ -67,8 +67,8 @@ else
     pair = pairUp(SIR);
     disp(pair);
     
-%     A = powerControl(Pairs, numel(xBS),noOfMobiles);
-%     disp(A);
+     A = powerControl(pair, numel(xBS),noOfMobiles);
+     disp(A);
     
 end
 

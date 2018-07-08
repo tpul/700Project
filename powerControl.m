@@ -4,8 +4,6 @@ function [pairs] = powerControl(matrixOfPairs, numberOfBS,numberOfMobiles)
 %balance the powers between all Tx with respect to median number.
 
 %retrieves the median number in the matrix
-
-
 midRangeValue = round((max(matrixOfPairs(:))+ min(matrixOfPairs(:)))/2);
 
 %get the size of matrix

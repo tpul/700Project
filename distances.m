@@ -1,5 +1,5 @@
 function [distances] = size(numel(xT),numel(xT))
-%%%%%%%%%%%%%%%Uplink
+%Uplink
 %Use loop to find the distance from each transmitter to BS
 for i = 1:numel(xBS)
     for j = 1:numel(xT)

@@ -45,7 +45,7 @@ for i = 1:numel(xBS)
     end
 end
 
-%Calculate pathloss of each Tx to each BS
+%Call funtion "gain" to calculate pathloss of each Tx to each BS
 gain = pathLoss(distances);
 [r,c] = size(gain);
 
@@ -55,15 +55,17 @@ if(r == 1)
     [M,I] = min(distances,[],2);
     pair = sprintf('\nMobile %d connects BS A', I);
     disp(pair);
-    %This condition decides which BS the mobile should connect to, if there was
-    %only one mobile operating in the area
+%This condition decides which BS the mobile should connect to, if there was
+%only one mobile operating in the area
 elseif(c == 1)
     [M,I] = min(distances,[],1);
     pair = sprintf('\nMobile 1 connects BS %c', char(I+64));
     disp(pair);
 else
+%Call signalToNoiseRatio function to calculate the SIR for each transmitter to each base station
     SIR = signalToNoiseRatio(gain);
 
+%Call the pair function which allocates a transmitter to a base station. This is determined by its SIR value.
     pair = pairUp(SIR);
     disp(pair);
     

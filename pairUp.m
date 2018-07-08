@@ -1,6 +1,5 @@
 function [pair] = pairUp(SIR)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+
 [r,c] = size(SIR);
 pair = NaN(r,c);
 

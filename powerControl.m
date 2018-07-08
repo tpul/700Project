@@ -4,7 +4,7 @@ function [pairs] = powerControl(matrixOfPairs, numberOfBS,numberOfMobiles)
 %balance the powers between all Tx with respect to median number.
 
 %retrieves the median number in the matrix
-% m = round(median(matrixOfPairs(:),'omitnan'));
+
 
 midRangeValue = round((max(matrixOfPairs(:))+ min(matrixOfPairs(:)))/2);
 
